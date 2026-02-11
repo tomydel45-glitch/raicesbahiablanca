@@ -1,0 +1,61 @@
+[
+  {
+    "slug": "casa-monte-hermoso",
+    "titulo": "Casa Monte Hermoso",
+    "descripcion": "",
+    "ubicacion": "Monte Hermoso",
+    "cloudinary_url": [
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO/1.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO/2.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO/3.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO/4.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO/5.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO/6.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO/7.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO/8.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO/9.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO/10.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO/11.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO/12.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO/13.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO/14.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO/15.jpg"
+    ]
+  },
+  {
+    "slug": "casa-monte-hermoso-2",
+    "titulo": "Casa Monte Hermoso 2",
+    "descripcion": "",
+    "ubicacion": "Monte Hermoso",
+    "cloudinary_url": [
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO%202/1.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO%202/2.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO%202/3.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO%202/4.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO%202/5.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/CASA%20MONTE%20HERMOSO%202/6.jpg"
+    ]
+  },
+  {
+    "slug": "indian",
+    "titulo": "INDIAN",
+    "descripcion": "",
+    "ubicacion": "Bahía Blanca",
+    "cloudinary_url": [
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/INDIAN/1.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/INDIAN/2.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/INDIAN/3.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/INDIAN/4.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/INDIAN/5.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/INDIAN/6.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/INDIAN/7.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/INDIAN/8.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/INDIAN/9.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/INDIAN/10.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/INDIAN/11.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/INDIAN/12.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/INDIAN/13.jpg",
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1769551199/OBRAS/INDIAN/14.jpg"
+    ]
+  }
+]
