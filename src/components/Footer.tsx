@@ -28,8 +28,8 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3">
-              <img src="/logo-raices.png" alt="Raíces" className="h-12 w-auto brightness-0 invert" />
-              <span className="font-bold text-xl">Raíces Bahía Blanca</span>
+              <img src="/logo-raices.png" alt="Raíces" className="h-16 w-auto brightness-0 invert" />
+              <span className="font-bold text-xl">Raíces Teconología en Construcción</span>
             </Link>
             <p className="text-white/60">
               Soluciones integrales en sistemas de construcción en seco desde 1994.

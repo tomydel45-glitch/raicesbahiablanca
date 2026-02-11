@@ -5,6 +5,8 @@ import Autoplay from 'embla-carousel-autoplay';
 
 const clients = [
   { name: 'Shell', logo: '/clients/shell.png' },
+  {name:'McDonald’s', logo: '/clients/mcdonalds.png' },
+
   { name: 'Coca-Cola', logo: '/clients/cocacola.png' },
   { name: 'Stellantis', logo: '/clients/stellantis.png' },
   { name: 'Indian', logo: '/clients/indian.png' },

@@ -57,7 +57,7 @@ export function Navbar() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="z-50">
-              <img src="/logo-raices.png" alt="Raíces Bahía Blanca" className="h-20 w-auto" />
+              <img src="/logo-raices.png" alt="Raíces Bahía Blanca" className="h-28 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}

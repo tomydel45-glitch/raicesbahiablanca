@@ -50,10 +50,10 @@ export function HeroSection() {
           {/* Right - Logo & Company Name */}
           <div className="hidden lg:flex flex-col items-center justify-center animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <Image
-              src="/logo-raices.png"
+              src="/logo-raices-blanco.png"
               alt="Raíces Bahía Blanca Logo"
-              width={448}
-              height={448}
+              width={780}
+              height={780}
               priority
               className="w-[28rem] h-auto drop-shadow-2xl"
             />
