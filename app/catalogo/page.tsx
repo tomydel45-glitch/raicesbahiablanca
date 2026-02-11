@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -13,6 +13,9 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter } from '@/components/ui/sheet';
 import { Badge } from '@/components/ui/badge';
 import productsData from '@/data/products.json';
+
+// Force dynamic rendering
+export const dynamic = 'force-dynamic';
 
 interface Product {
   Producto: string;
@@ -127,7 +130,7 @@ const getUniqueUsos = (products: Product[]) => {
 
 const PRODUCTS_PER_PAGE = 18;
 
-export default function Catalogo() {
+function CatalogoContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -1025,5 +1028,28 @@ export default function Catalogo() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function Catalogo() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-muted via-background to-muted/50">
+        <Navbar />
+        <section className="pt-28 pb-8">
+          <div className="container-wide">
+            <div className="flex items-center justify-center h-96">
+              <div className="text-center">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+                <p className="text-muted-foreground">Cargando catálogo...</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <Footer />
+      </div>
+    }>
+      <CatalogoContent />
+    </Suspense>
   );
 }
