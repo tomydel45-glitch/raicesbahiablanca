@@ -44,9 +44,9 @@ export function ClientsSection() {
             ]}
             className="w-full max-w-xs mx-auto"
           >
-            <CarouselContent>
+            <CarouselContent className="-ml-4">
               {clients.map((client) => (
-                <CarouselItem key={client.name} className="basis-1/2">
+                <CarouselItem key={client.name} className="pl-4 basis-1/2">
                   <div className="h-32 flex items-center justify-center p-4 group">
                     <img
                       src={client.logo}

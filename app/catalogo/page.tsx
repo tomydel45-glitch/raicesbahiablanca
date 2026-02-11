@@ -521,7 +521,7 @@ function CatalogoContent() {
                           onClick={() => toggleMobileSection('categorias')}
                           className="w-full flex items-center justify-between py-3 font-semibold text-foreground"
                         >
-                          <span>Categorías ({products.length})</span>
+                          <span>Categorías </span>
                           <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${mobileExpandedSections.includes('categorias') ? 'rotate-180' : ''}`} />
                         </button>
                         {mobileExpandedSections.includes('categorias') && (

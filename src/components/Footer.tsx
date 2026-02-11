@@ -158,14 +158,6 @@ export function Footer() {
           <p className="text-white/40 text-sm">
             © {new Date().getFullYear()} Raíces Bahía Blanca. Todos los derechos reservados.
           </p>
-          <div className="flex gap-6 text-sm text-white/40">
-            <a href="#" className="hover:text-primary transition-colors">
-              Términos y Condiciones
-            </a>
-            <a href="#" className="hover:text-primary transition-colors">
-              Política de Privacidad
-            </a>
-          </div>
         </div>
       </div>
     </footer>

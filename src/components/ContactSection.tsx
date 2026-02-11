@@ -14,6 +14,7 @@ const locations = [
     phone: '+54 9 2914 63-7191',
     email: 'administracion@raicesbahiablanca.com.ar',
     waLink: 'https://wa.me/message/6GDRS3G3GC4RF1',
+    mapsLink: 'https://maps.app.goo.gl/efjFjDz7dkFVN4Wt9',
   },
   {
     city: 'Viedma',
@@ -21,6 +22,7 @@ const locations = [
     phone: '+54 9 2920 44-6163',
     email: 'viedma@raicesbahiablanca.com.ar',
     waLink: 'https://wa.me/message/DU24YL5VYK57E1',
+    mapsLink: 'https://maps.app.goo.gl/DAjsCM5dEsuQrT7X6',
   },
   {
     city: 'Las Grutas',
@@ -28,6 +30,7 @@ const locations = [
     phone: '+54 9 2920 36-6569',
     email: 'lasgrutas@raicesbahiablanca.com.ar',
     waLink: 'https://wa.me/542920366569',
+    mapsLink: 'https://maps.app.goo.gl/Rh2ydLvtYnDZ6G6m6',
   },
 ];
 
@@ -100,7 +103,14 @@ ${formData.mensaje}`;
                 <div className="space-y-3 text-sm">
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
-                    <span>{location.address}</span>
+                    <a
+                      href={location.mapsLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      {location.address}
+                    </a>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Phone className="w-4 h-4 text-primary flex-shrink-0" />

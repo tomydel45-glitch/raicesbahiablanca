@@ -18,18 +18,21 @@ const sucursales = [
     direccion: 'Sucursal Bahía Blanca',
     lat: -38.7196,
     lng: -62.2724,
+    mapsLink: 'https://maps.app.goo.gl/efjFjDz7dkFVN4Wt9',
   },
   {
     nombre: 'Viedma',
     direccion: 'Sucursal Viedma',
     lat: -40.8135,
     lng: -62.9967,
+    mapsLink: 'https://maps.app.goo.gl/DAjsCM5dEsuQrT7X6',
   },
   {
     nombre: 'Las Grutas',
     direccion: 'Sucursal Las Grutas',
     lat: -40.8097,
     lng: -65.0833,
+    mapsLink: 'https://maps.app.goo.gl/Rh2ydLvtYnDZ6G6m6',
   },
 ];
 
@@ -54,7 +57,7 @@ export function MapSection() {
     sucursales.forEach((s) => {
       L.marker([s.lat, s.lng])
         .addTo(map)
-        .bindPopup(`<strong>${s.nombre}</strong><br/>${s.direccion}`);
+        .bindPopup(`<strong>${s.nombre}</strong><br/>${s.direccion}<br/><a href="${s.mapsLink}" target="_blank" rel="noopener noreferrer" style="color:#0ea5e9;text-decoration:underline;">Ver en Google Maps</a>`);
     });
 
     mapInstanceRef.current = map;

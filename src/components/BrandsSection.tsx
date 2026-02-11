@@ -8,21 +8,35 @@ import {
 import Autoplay from 'embla-carousel-autoplay';
 
 const brands = [
+ { name: 'Knauf', logo: '/brands/knauf.png' },
+ { name: 'Barbieri', logo: '/brands/barbieri.png' },
+ {name:'Isover', logo: '/brands/isover.png' },
+ { name: 'Eternit', logo: '/brands/eternit.png' },
+ { name: 'Superboard', logo: '/brands/superboard.png' },
+ { name: 'Oblak', logo: '/brands/oblak.png' },
+ { name: 'Perfiles Revestidos', logo: '/brands/perfiles-revestidos.png' },
+ { name: 'Aisplac', logo: '/brands/aisplac.png' },
   { name: 'Stanley', logo: '/brands/stanley.png' },
   { name: 'DeWalt', logo: '/brands/dewalt.png' },
-  { name: 'Barbieri', logo: '/brands/barbieri.png' },
   { name: 'Fischer', logo: '/brands/fischer.png' },
-  { name: 'Oblak', logo: '/brands/oblak.png' },
   { name: 'Atenneas', logo: '/brands/atenneas.png' },
   { name: 'Aquapanel', logo: '/brands/aquapanel.png' },
   { name: 'AMF', logo: '/brands/amf.png' },
-  { name: 'Aisplac', logo: '/brands/aisplac.png' },
-  { name: 'Knauf', logo: '/brands/knauf.png' },
-  { name: 'Superboard', logo: '/brands/superboard.png' },
-  { name: 'Eternit', logo: '/brands/eternit.png' },
   { name: 'Tel', logo: '/brands/tel.png' },
-  { name: 'Isover', logo: '/brands/isover.png' },
   { name: 'Tussok', logo: '/brands/tussok.png' },
+  { name: '3m', logo: '/brands/3m.png' },
+  { name: 'Barovo', logo: '/brands/barovo.png' },
+  { name: 'Bul', logo: '/brands/bul.png' },
+  { name: 'Emtop', logo: '/brands/emtop.png' },
+  { name: 'Essamet', logo: '/brands/essamet.png' },
+  { name: 'Ferrohouse', logo: '/brands/ferrohouse.png' },
+  { name: 'Hamilton', logo: '/brands/hamilton.png' },
+  { name: 'LP', logo: '/brands/lp.png' },
+  { name: 'Polipor', logo: '/brands/polipor.png' },
+  { name: 'Polytemp', logo: '/brands/polytemp.png' },
+  { name: 'Typar', logo: '/brands/typar.png' },
+  { name: 'Weber', logo: '/brands/weber.png' },
+  { name: 'Wichi', logo: '/brands/wichi.png' },
 ];
 
 export function BrandsSection() {
@@ -58,7 +72,7 @@ export function BrandsSection() {
                       <img
                         src={brand.logo}
                         alt={brand.name}
-                        className="max-h-20 max-w-[180px] w-auto object-contain opacity-70 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110"
+                        className="max-h-18 md:max-h-20 max-w-[120px] md:max-w-[180px] w-auto object-contain opacity-70 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110"
                       />
                     </div>
                   </CarouselItem>
