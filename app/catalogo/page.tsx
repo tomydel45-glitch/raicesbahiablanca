@@ -675,7 +675,7 @@ export default function Catalogo() {
 
             {/* Desktop Filters Sidebar */}
             <aside className="hidden lg:block lg:w-72 flex-shrink-0">
-              <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border/50 p-6 sticky top-24 shadow-lg">
+              <div className="bg-card/80 backdrop-blur-sm rounded-2xl border border-border/50 p-6 sticky top-24 shadow-lg max-h-[calc(100vh-7rem)] flex flex-col">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-3">
                     <h3 className="font-bold text-xl text-foreground">Filtros</h3>
@@ -687,6 +687,8 @@ export default function Catalogo() {
                   </div>
                 </div>
 
+                {/* Scrollable filter content */}
+                <div className="overflow-y-auto flex-1 -mr-2 pr-2">
                 {/* Categories */}
                 <div className="mb-6">
                   <button 
@@ -826,6 +828,7 @@ export default function Catalogo() {
                       ))}
                     </div>
                   )}
+                </div>
                 </div>
               </div>
             </aside>

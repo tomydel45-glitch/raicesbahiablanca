@@ -32,6 +32,8 @@ const brandLogoMap: Record<string, string> = {
   'QUIMTEX': '/brands/quimtex.png',
   'RC': '/brands/rc.png',
   'SKIL': '/brands/skil.png',
+  'FIBROFLEX': '/brands/fibroflex.png',
+  'PERFILES REVESTIDOS': '/brands/perfiles-revestidos.png',
 };
 
 export function getBrandLogo(brand: string): string | null {
