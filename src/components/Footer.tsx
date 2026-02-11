@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { MapPin, Phone, Mail, Facebook, Instagram, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Instagram, MessageCircle, Building2 } from 'lucide-react';
 
 const quickLinks = [
   { name: 'Inicio', href: '/' },
@@ -20,57 +20,87 @@ const productLinks = [
   { name: 'Terminaciones', href: '/catalogo?categoria=TERMINACIONES' },
 ];
 
+const sucursales = [
+  {
+    city: 'Bahía Blanca',
+    address: 'Luiggi 1263',
+    phone: '+54 9 2914 63-7191',
+    email: 'administracion@raicesbahiablanca.com.ar',
+    waLink: 'https://wa.me/message/6GDRS3G3GC4RF1',
+    mapsLink: 'https://maps.app.goo.gl/efjFjDz7dkFVN4Wt9',
+  },
+  {
+    city: 'Viedma',
+    address: 'Parque Industrial 206 y 207',
+    phone: '+54 9 2920 44-6163',
+    email: 'viedma@raicesbahiablanca.com.ar',
+    waLink: 'https://wa.me/message/DU24YL5VYK57E1',
+    mapsLink: 'https://maps.app.goo.gl/DAjsCM5dEsuQrT7X6',
+  },
+  {
+    city: 'Las Grutas',
+    address: 'Colectora 995',
+    phone: '+54 9 2920 36-6569',
+    email: 'lasgrutas@raicesbahiablanca.com.ar',
+    waLink: 'https://wa.me/542920366569',
+    mapsLink: 'https://maps.app.goo.gl/Rh2ydLvtYnDZ6G6m6',
+  },
+];
+
 export function Footer() {
   return (
     <footer className="bg-foreground text-white">
-      <div className="container-wide py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container-wide py-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
-          <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-3">
-              <img src="/logo-raices.png" alt="Raíces" className="h-16 w-auto brightness-0 invert" />
-              <span className="font-bold text-xl">Raíces Teconología en Construcción</span>
+          <div className="space-y-4">
+            <Link href="/" className="inline-flex items-center gap-3">
+              <img src="/logo-raices.png" alt="Raíces" className="h-14 w-auto brightness-0 invert" />
+              <div>
+                <span className="font-bold text-lg block leading-tight">Raíces</span>
+                <span className="text-white/50 text-xs">Tecnología en Construcción</span>
+              </div>
             </Link>
-            <p className="text-white/60">
+            <p className="text-white/50 text-sm leading-relaxed">
               Soluciones integrales en sistemas de construcción en seco desde 1994.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               <a
                 href="https://www.facebook.com/raices.bahia.blanca"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
               >
-                <Facebook className="h-5 w-5" />
+                <Facebook className="h-4 w-4" />
               </a>
               <a
                 href="https://www.instagram.com/raices.construccion?igsh=cnZtaGhuamV5enY3"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
               >
-                <Instagram className="h-5 w-5" />
+                <Instagram className="h-4 w-4" />
               </a>
               <a
                 href="https://wa.me/message/6GDRS3G3GC4RF1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
               >
-                <MessageCircle className="h-5 w-5" />
+                <MessageCircle className="h-4 w-4" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Enlaces Rápidos</h4>
-            <ul className="space-y-3">
+            <h4 className="font-bold text-base mb-4 text-white">Enlaces Rápidos</h4>
+            <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-white/60 hover:text-primary transition-colors"
+                    className="text-white/50 hover:text-primary transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -81,13 +111,13 @@ export function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Productos</h4>
-            <ul className="space-y-3">
+            <h4 className="font-bold text-base mb-4 text-white">Productos</h4>
+            <ul className="space-y-2">
               {productLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-white/60 hover:text-primary transition-colors"
+                    className="text-white/50 hover:text-primary transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -96,57 +126,23 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Contacto</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-white/60">
-                  Bahía Blanca, Buenos Aires, Argentina
-                </span>
-              </li>
-              <li className="flex flex-col gap-2">
-                <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-white/60">Sucursales / WhatsApp</span>
-                </div>
-                <div className="flex flex-col ml-8 mt-1 space-y-1">
+            <h4 className="font-bold text-base mb-4 text-white">Contacto</h4>
+            <ul className="space-y-2">
+              {sucursales.map((suc) => (
+                <li key={suc.city}>
                   <a
-                    href="https://wa.me/message/6GDRS3G3GC4RF1"
+                    href={suc.waLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white/60 hover:text-primary transition-colors"
+                    className="text-white/50 hover:text-primary transition-colors text-sm flex items-center gap-2"
                   >
-                    Bahía Blanca (WhatsApp)
+                    <Phone className="h-3.5 w-3.5 text-primary flex-shrink-0" />
+                    <span>{suc.city} (WhatsApp)</span>
                   </a>
-                  <a
-                    href="https://wa.me/message/DU24YL5VYK57E1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white/60 hover:text-primary transition-colors"
-                  >
-                    Viedma (WhatsApp)
-                  </a>
-                  <a
-                    href="https://wa.me/542920366569"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white/60 hover:text-primary transition-colors"
-                  >
-                    Las Grutas (WhatsApp)
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                <a
-                  href="mailto:info@raicesbahiablanca.com.ar"
-                  className="text-white/60 hover:text-primary transition-colors"
-                >
-                  info@raicesbahiablanca.com.ar
-                </a>
-              </li>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
