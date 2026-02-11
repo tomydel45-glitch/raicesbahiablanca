@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
 import obrasData from '@/data/obras.json';
+import { buildMetadata } from '@/lib/seo';
+import { breadcrumbJsonLd } from '@/lib/jsonLd';
 
 interface Obra {
   slug: string;
@@ -16,14 +19,36 @@ interface Obra {
 
 const obras: Obra[] = obrasData;
 
-export const metadata: Metadata = {
-  title: 'Obras Realizadas - Raíces Bahía Blanca',
-  description: 'Conocé algunos de los proyectos en los que participamos, brindando materiales de primera calidad para construcción en seco en Bahía Blanca y la región.',
-};
+export const metadata: Metadata = buildMetadata({
+  title: 'Obras Realizadas — Proyectos en Construcción en Seco | Raíces Bahía Blanca',
+  description:
+    'Conocé las obras y proyectos realizados con materiales de construcción en seco por Raíces Bahía Blanca. Casas, locales comerciales y más en Bahía Blanca y la región.',
+  path: '/obras',
+  keywords: [
+    'obras construcción en seco',
+    'proyectos steel frame',
+    'casa steel frame',
+    'vivienda construcción en seco',
+    'drywall obras',
+    'casa prefabricada',
+    'steel frame Bahía Blanca',
+    'Bahía Blanca',
+    'Monte Hermoso',
+  ],
+});
 
 export default function Obras() {
+  const breadcrumb = breadcrumbJsonLd([
+    { name: 'Inicio', url: '/' },
+    { name: 'Obras', url: '/obras' },
+  ]);
+
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
       <Navbar />
       
       {/* Header */}
@@ -56,10 +81,12 @@ export default function Obras() {
                   className="group card-elevated overflow-hidden"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                    <img
+                    <Image
                       src={cardImage}
                       alt={obra.titulo}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     {/* Ubicación sobre la imagen */}
                     <div className="absolute top-4 left-4 flex items-center gap-1.5 bg-background/90 backdrop-blur-sm px-3 py-1.5 rounded-full">

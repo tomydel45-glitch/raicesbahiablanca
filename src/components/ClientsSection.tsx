@@ -2,6 +2,7 @@
 
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
+import Image from 'next/image';
 
 const clients = [
   { name: 'Shell', logo: '/clients/shell.png' },
@@ -48,9 +49,11 @@ export function ClientsSection() {
               {clients.map((client) => (
                 <CarouselItem key={client.name} className="pl-4 basis-1/2">
                   <div className="h-32 flex items-center justify-center p-4 group">
-                    <img
+                    <Image
                       src={client.logo}
                       alt={client.name}
+                      width={160}
+                      height={80}
                       className="max-h-20 max-w-full w-auto object-contain opacity-70 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110"
                     />
                   </div>
@@ -64,9 +67,11 @@ export function ClientsSection() {
         <div className="hidden md:grid grid-cols-3 md:grid-cols-5 gap-8 items-center justify-items-center max-w-4xl mx-auto">
           {clients.map((client) => (
             <div key={client.name} className="h-24 flex items-center justify-center group">
-              <img
+              <Image
                 src={client.logo}
                 alt={client.name}
+                width={140}
+                height={64}
                 className="max-h-16 max-w-[140px] w-auto object-contain opacity-70 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110"
               />
             </div>

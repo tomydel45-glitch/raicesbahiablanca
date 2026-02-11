@@ -6,6 +6,7 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
+import Image from 'next/image';
 
 const brands = [
  { name: 'Knauf', logo: '/brands/knauf.png' },
@@ -69,9 +70,11 @@ export function BrandsSection() {
                 {brands.map((brand) => (
                   <CarouselItem key={brand.name} className="pl-4 md:pl-6 basis-1/3 md:basis-1/4 lg:basis-1/5">
                     <div className="h-28 flex items-center justify-center group">
-                      <img
+                      <Image
                         src={brand.logo}
                         alt={brand.name}
+                        width={180}
+                        height={80}
                         className="max-h-18 md:max-h-20 max-w-[120px] md:max-w-[180px] w-auto object-contain opacity-70 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110"
                       />
                     </div>

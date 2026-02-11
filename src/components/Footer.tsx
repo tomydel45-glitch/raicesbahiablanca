@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Phone, Mail, Facebook, Instagram, MessageCircle, Building2 } from 'lucide-react';
 
 const quickLinks = [
@@ -55,7 +56,7 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/" className="inline-flex items-center gap-3">
-              <img src="/logo-raices.png" alt="Raíces" className="h-14 w-auto brightness-0 invert" />
+              <Image src="/logo-raices.png" alt="Raíces" width={56} height={56} className="h-14 w-auto brightness-0 invert" />
               <div>
                 <span className="font-bold text-lg block leading-tight">Raíces</span>
                 <span className="text-white/50 text-xs">Tecnología en Construcción</span>

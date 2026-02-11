@@ -10,15 +10,40 @@ import { ContactSection } from '@/components/ContactSection';
 import MapWrapper from '@/components/MapWrapper';
 import { Footer } from '@/components/Footer';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { buildMetadata } from '@/lib/seo';
+import { organizationJsonLd } from '@/lib/jsonLd';
 
-export const metadata: Metadata = {
-  title: 'Raíces Bahía Blanca - Inicio',
-  description: 'Distribuidores autorizados de las principales marcas de construcción en seco en Bahía Blanca. Calidad, variedad y atención personalizada.',
-};
+export const metadata: Metadata = buildMetadata({
+  title: 'Raíces Bahía Blanca — Materiales de Construcción en Seco',
+  description:
+    'Distribuidores autorizados de materiales de construcción en seco en Bahía Blanca, Viedma y Las Grutas. Placas, perfiles, aislaciones, herramientas, masillas y asesoramiento técnico desde 1994.',
+  path: '/',
+  keywords: [
+    'construcción en seco Bahía Blanca',
+    'materiales construcción',
+    'distribuidores autorizados',
+    'placas de yeso',
+    'perfiles metálicos',
+    'aislaciones',
+    'durlock Bahía Blanca',
+    'steel frame Bahía Blanca',
+    'drywall',
+    'cielorraso',
+    'tabiques',
+    'Knauf',
+    'Barbieri',
+    'construcción en seco Viedma',
+    'materiales Las Grutas',
+  ],
+});
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }}
+      />
       <Navbar />
       <main>
         <HeroSection />
