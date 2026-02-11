@@ -48,20 +48,20 @@ export function AboutSection() {
 
           {/* Image */}
           <div className="relative animate-fade-up" style={{ animationDelay: '0.2s' }}>
-            <div className="relative rounded-2xl overflow-hidden shadow-card-hover h-[500px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-card-hover aspect-[4/3] md:aspect-auto md:h-[500px]">
               <Image
                 src="/about-local.jpg"
                 alt="Raíces Bahía Blanca"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-contain"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark/40 to-transparent" />
             </div>
             {/* Floating badge */}
-            <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-xl shadow-lg">
-              <div className="text-3xl font-bold">RAÍCES</div>
-              <div className="text-sm opacity-80">Tecnología en Construcción</div>
+            <div className="absolute -bottom-4 left-2 md:-bottom-6 md:-left-6 bg-primary text-white p-4 md:p-6 rounded-xl shadow-lg">
+              <div className="text-2xl md:text-3xl font-bold">RAÍCES</div>
+              <div className="text-xs md:text-sm opacity-80">Tecnología en Construcción</div>
             </div>
           </div>
         </div>

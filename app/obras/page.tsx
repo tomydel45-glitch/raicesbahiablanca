@@ -35,8 +35,7 @@ export default function Obras() {
               Obras Realizadas
             </h1>
             <p className="text-lg text-muted-foreground">
-              Conocé algunos de los proyectos en los que participamos, brindando materiales 
-              de primera calidad para construcción en seco en Bahía Blanca y la región.
+              Conocé algunos de los proyectos en los que participamos, aportando materiales de primera calidad y ejecución con mano de obra calificada en sistemas de construcción en seco en Bahía Blanca y la región.
             </p>
           </div>
         </div>

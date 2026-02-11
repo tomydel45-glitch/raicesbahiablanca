@@ -116,6 +116,15 @@ const getUniqueBrands = (products: Product[]) => {
   ];
 };
 
+// Get unique USO values from Subcategoría 1
+const getUniqueUsos = (products: Product[]) => {
+  const usos = [...new Set(products.map(p => p['Subcategoría 1']?.trim()).filter(Boolean))];
+  return [
+    { id: 'todos', label: 'Todos' },
+    ...usos.sort().map(uso => ({ id: uso.toLowerCase().replace(/\//g, '-'), label: uso }))
+  ];
+};
+
 const PRODUCTS_PER_PAGE = 18;
 
 export default function Catalogo() {
@@ -126,24 +135,27 @@ export default function Catalogo() {
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const [selectedBrand, setSelectedBrand] = useState('Todas');
+  const [selectedUso, setSelectedUso] = useState('Todos');
   const [showFilters, setShowFilters] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [expandedSections, setExpandedSections] = useState({
-    categories: true,
-    brands: true,
+    categories: false,
+    brands: false,
+    uso: false,
   });
 
   // Mobile drawer states
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [brandSearch, setBrandSearch] = useState('');
   const [showAllBrands, setShowAllBrands] = useState(false);
-  const [mobileExpandedSections, setMobileExpandedSections] = useState<string[]>(['categorias']);
+  const [mobileExpandedSections, setMobileExpandedSections] = useState<string[]>([]);
   const [subcategoryView, setSubcategoryView] = useState<string | null>(null);
 
   const products = productsData as Product[];
   const categories = useMemo(() => getUniqueCategories(products), [products]);
   const brands = useMemo(() => getUniqueBrands(products), [products]);
+  const usos = useMemo(() => getUniqueUsos(products), [products]);
 
   // Helper to update URL search params without full navigation
   const updateSearchParams = useCallback((updates: Record<string, string | null>) => {
@@ -196,12 +208,21 @@ export default function Catalogo() {
       setSelectedBrand('Todas');
     }
 
+    // Uso
+    const usoParam = searchParams.get('uso');
+    if (usoParam) {
+      const matchedUso = usos.find(u => u.id === usoParam);
+      setSelectedUso(matchedUso ? matchedUso.label : 'Todos');
+    } else {
+      setSelectedUso('Todos');
+    }
+
     // Search
     setSearchQuery(buscarParam || '');
 
     // Page
     setCurrentPage(paginaParam ? parseInt(paginaParam, 10) || 1 : 1);
-  }, [searchParams, products, brands]);
+  }, [searchParams, products, brands, usos]);
 
   // Compute subcategories for the expanded category
   const subcategories = useMemo(() => {
@@ -262,7 +283,16 @@ export default function Catalogo() {
     });
   };
 
-  const toggleSection = (section: 'categories' | 'brands') => {
+  const handleUsoChange = (uso: string) => {
+    setSelectedUso(uso);
+    setCurrentPage(1);
+    updateSearchParams({
+      uso: uso === 'Todos' ? null : uso.toLowerCase().replace(/\//g, '-'),
+      pagina: null,
+    });
+  };
+
+  const toggleSection = (section: 'categories' | 'brands' | 'uso') => {
     setExpandedSections(prev => ({ ...prev, [section]: !prev[section] }));
   };
 
@@ -282,18 +312,24 @@ export default function Catalogo() {
     
     const productBrand = product.Marca.trim() === '' ? 'Genérico' : product.Marca;
     const brandMatch = selectedBrand === 'Todas' || productBrand === selectedBrand;
+    
+    // Uso (Subcategoría 1) filtering
+    const productUso = product['Subcategoría 1']?.trim() || '';
+    const usoMatch = selectedUso === 'Todos' || productUso === selectedUso;
+    
     const searchMatch = searchQuery === '' || 
       product.Producto.toLowerCase().includes(searchQuery.toLowerCase()) ||
       product.Categoría.toLowerCase().includes(searchQuery.toLowerCase()) ||
       product.Marca.toLowerCase().includes(searchQuery.toLowerCase()) ||
       product.Descripción.toLowerCase().includes(searchQuery.toLowerCase());
-    return categoryMatch && subcategoryMatch && brandMatch && searchMatch;
-  }), [products, selectedCategory, selectedSubcategory, selectedBrand, searchQuery]);
+    return categoryMatch && subcategoryMatch && brandMatch && usoMatch && searchMatch;
+  }), [products, selectedCategory, selectedSubcategory, selectedBrand, selectedUso, searchQuery]);
 
   const activeFilters = [
     ...(selectedCategory !== 'Todos' ? [{ type: 'category', value: selectedCategory }] : []),
     ...(selectedSubcategory ? [{ type: 'subcategory', value: selectedSubcategory }] : []),
     ...(selectedBrand !== 'Todas' ? [{ type: 'brand', value: selectedBrand }] : []),
+    ...(selectedUso !== 'Todos' ? [{ type: 'uso', value: selectedUso }] : []),
     ...(searchQuery ? [{ type: 'search', value: searchQuery }] : []),
   ];
 
@@ -308,6 +344,10 @@ export default function Catalogo() {
       setSelectedBrand('Todas');
       updateSearchParams({ marca: null, pagina: null });
     }
+    if (type === 'uso') {
+      setSelectedUso('Todos');
+      updateSearchParams({ uso: null, pagina: null });
+    }
     if (type === 'search') {
       setSearchQuery('');
       updateSearchParams({ buscar: null, pagina: null });
@@ -317,9 +357,10 @@ export default function Catalogo() {
   const clearAllFilters = () => {
     handleCategoryChange('Todos');
     setSelectedBrand('Todas');
+    setSelectedUso('Todos');
     setSearchQuery('');
     setSelectedSubcategory(null);
-    updateSearchParams({ categoria: null, subcategoria: null, marca: null, buscar: null, pagina: null });
+    updateSearchParams({ categoria: null, subcategoria: null, marca: null, uso: null, buscar: null, pagina: null });
   };
 
   // Filtered brands for mobile search
@@ -583,6 +624,39 @@ export default function Catalogo() {
                           </div>
                         )}
                       </div>
+
+                      {/* Uso Accordion */}
+                      <div>
+                        <button
+                          onClick={() => toggleMobileSection('uso')}
+                          className="w-full flex items-center justify-between py-3 font-semibold text-foreground"
+                        >
+                          <span>Uso</span>
+                          <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${mobileExpandedSections.includes('uso') ? 'rotate-180' : ''}`} />
+                        </button>
+                        {mobileExpandedSections.includes('uso') && (
+                          <div className="space-y-0.5 animate-fade-in">
+                            {usos.map((uso) => (
+                              <button
+                                key={uso.id}
+                                className={`w-full flex items-center gap-2 py-2 px-3 rounded-xl transition-all text-sm ${
+                                  selectedUso === uso.label 
+                                    ? 'bg-primary/10 text-primary font-medium' 
+                                    : 'text-foreground hover:bg-muted/50'
+                                }`}
+                                onClick={() => handleUsoChange(uso.label)}
+                              >
+                                <span className={`w-4 h-4 rounded border flex items-center justify-center shrink-0 ${
+                                  selectedUso === uso.label ? 'bg-primary border-primary' : 'border-border/70'
+                                }`}>
+                                  {selectedUso === uso.label && <span className="text-primary-foreground text-xs">✓</span>}
+                                </span>
+                                {uso.label}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     </div>
 
                     {/* Footer */}
@@ -687,7 +761,7 @@ export default function Catalogo() {
                 </div>
 
                 {/* Brands */}
-                <div>
+                <div className="mb-6">
                   <button 
                     onClick={() => toggleSection('brands')}
                     className="w-full flex items-center justify-between font-semibold text-sm text-foreground mb-3"
@@ -713,6 +787,40 @@ export default function Catalogo() {
                               : 'text-muted-foreground group-hover:text-foreground'
                           }`}>
                             {brand.label}
+                          </span>
+                        </label>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Uso */}
+                <div>
+                  <button 
+                    onClick={() => toggleSection('uso')}
+                    className="w-full flex items-center justify-between font-semibold text-sm text-foreground mb-3"
+                  >
+                    <span>Uso</span>
+                    <ChevronDown className={`h-4 w-4 transition-transform ${expandedSections.uso ? 'rotate-180' : ''}`} />
+                  </button>
+                  {expandedSections.uso && (
+                    <div className="space-y-2">
+                      {usos.map((uso) => (
+                        <label
+                          key={uso.id}
+                          className="flex items-center gap-3 cursor-pointer group py-1.5"
+                        >
+                          <Checkbox
+                            checked={selectedUso === uso.label}
+                            onCheckedChange={() => handleUsoChange(uso.label)}
+                            className="rounded border-border/70 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                          />
+                          <span className={`text-sm transition-colors ${
+                            selectedUso === uso.label 
+                              ? 'text-foreground font-medium' 
+                              : 'text-muted-foreground group-hover:text-foreground'
+                          }`}>
+                            {uso.label}
                           </span>
                         </label>
                       ))}
