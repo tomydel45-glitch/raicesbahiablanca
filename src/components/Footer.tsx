@@ -36,7 +36,7 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/raices.bahia.blanca"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
@@ -44,7 +44,7 @@ export function Footer() {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/raices.construccion?igsh=cnZtaGhuamV5enY3"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
@@ -52,7 +52,7 @@ export function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="https://wa.me/542914000000"
+                href="https://wa.me/message/6GDRS3G3GC4RF1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
@@ -106,14 +106,37 @@ export function Footer() {
                   Bahía Blanca, Buenos Aires, Argentina
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                <a
-                  href="tel:+542914000000"
-                  className="text-white/60 hover:text-primary transition-colors"
-                >
-                  (0291) 400-0000
-                </a>
+              <li className="flex flex-col gap-2">
+                <div className="flex items-center gap-3">
+                  <Phone className="h-5 w-5 text-primary flex-shrink-0" />
+                  <span className="text-white/60">Sucursales / WhatsApp</span>
+                </div>
+                <div className="flex flex-col ml-8 mt-1 space-y-1">
+                  <a
+                    href="https://wa.me/message/6GDRS3G3GC4RF1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/60 hover:text-primary transition-colors"
+                  >
+                    Bahía Blanca (WhatsApp)
+                  </a>
+                  <a
+                    href="https://wa.me/message/DU24YL5VYK57E1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/60 hover:text-primary transition-colors"
+                  >
+                    Viedma (WhatsApp)
+                  </a>
+                  <a
+                    href="https://wa.me/542920366569"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white/60 hover:text-primary transition-colors"
+                  >
+                    Las Grutas (WhatsApp)
+                  </a>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0" />

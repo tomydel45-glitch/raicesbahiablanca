@@ -13,18 +13,21 @@ const locations = [
     address: 'Luiggi 1263',
     phone: '+54 9 2914 63-7191',
     email: 'administracion@raicesbahiablanca.com.ar',
+    waLink: 'https://wa.me/message/6GDRS3G3GC4RF1',
   },
   {
     city: 'Viedma',
     address: 'Parque Industrial 206 y 207',
     phone: '+54 9 2920 44-6163',
     email: 'viedma@raicesbahiablanca.com.ar',
+    waLink: 'https://wa.me/message/DU24YL5VYK57E1',
   },
   {
     city: 'Las Grutas',
     address: 'Colectora 995',
     phone: '+54 9 2920 36-6569',
     email: 'lasgrutas@raicesbahiablanca.com.ar',
+    waLink: 'https://wa.me/542920366569',
   },
 ];
 
@@ -101,7 +104,12 @@ ${formData.mensaje}`;
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                    <a href={`tel:${location.phone.replace(/\s/g, '')}`} className="hover:text-primary transition-colors">
+                    <a
+                      href={location.waLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
                       {location.phone}
                     </a>
                   </div>
