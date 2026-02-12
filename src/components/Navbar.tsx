@@ -97,7 +97,7 @@ export function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-x-0 top-0 z-40 md:hidden transition-all duration-500 ${
+        className={`fixed inset-x-0 top-0 z-40 md:hidden transition-[height,opacity] duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] overflow-hidden ${
           isMobileMenuOpen 
             ? 'h-[50vh] opacity-100 pointer-events-auto' 
             : 'h-0 opacity-0 pointer-events-none'
@@ -105,20 +105,22 @@ export function Navbar() {
       >
         {/* Background */}
         <div 
-          className="absolute inset-0 bg-white shadow-lg rounded-b-3xl"
+          className={`absolute inset-0 bg-white shadow-lg rounded-b-3xl transition-[border-radius] duration-500 ${
+            isMobileMenuOpen ? 'rounded-b-3xl' : 'rounded-b-none'
+          }`}
         />
         
         {/* Backdrop to close menu */}
         {isMobileMenuOpen && (
           <div 
-            className="fixed inset-0 -z-10"
+            className="fixed inset-0 -z-10 bg-black/10 animate-in fade-in duration-300"
             onClick={() => setIsMobileMenuOpen(false)}
           />
         )}
         
         {/* Menu Content */}
-        <div className={`relative h-full flex flex-col justify-center items-center pt-16 pb-6 transition-all duration-500 ${
-          isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0'
+        <div className={`relative h-full flex flex-col justify-center items-center pt-16 pb-6 transition-all duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-6 opacity-0'
         }`}>
           {/* Navigation Links */}
           <nav className="flex flex-col items-center gap-4">
@@ -126,12 +128,12 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-xl font-semibold text-foreground hover:text-primary transition-all duration-300 transform ${
+                className={`text-xl font-semibold text-foreground hover:text-primary transition-all duration-[500ms] ease-[cubic-bezier(0.22,1,0.36,1)] transform ${
                   isMobileMenuOpen 
-                    ? 'translate-y-0 opacity-100' 
-                    : 'translate-y-4 opacity-0'
+                    ? 'translate-y-0 opacity-100 scale-100' 
+                    : 'translate-y-6 opacity-0 scale-95'
                 }`}
-                style={{ transitionDelay: `${100 + index * 50}ms` }}
+                style={{ transitionDelay: isMobileMenuOpen ? `${150 + index * 75}ms` : '0ms' }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
@@ -140,9 +142,9 @@ export function Navbar() {
           </nav>
 
           {/* CTA Button */}
-          <div className={`mt-6 transition-all duration-500 ${
-            isMobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-          }`} style={{ transitionDelay: '350ms' }}>
+          <div className={`mt-6 transition-all duration-[500ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
+            isMobileMenuOpen ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-6 opacity-0 scale-90'
+          }`} style={{ transitionDelay: isMobileMenuOpen ? '500ms' : '0ms' }}>
             <Button 
               variant="default" 
               size="default" 
