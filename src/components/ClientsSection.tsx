@@ -13,9 +13,9 @@ const clients = [
   { name: 'Indian', logo: '/clients/indian.png' },
   { name: 'Dietrich', logo: '/clients/dietrich.png' },
   { name: 'Sidecar', logo: '/clients/sidecar.png' },
-  { name: 'La Brújula 24', logo: '/clients/labrujula24.png' },
   { name: 'Spot', logo: '/clients/spot.png' },
   { name: 'ACA', logo: '/clients/aca.png' },
+  { name: 'Mity', logo: '/clients/mity1.png' },
 ];
 
 export function ClientsSection() {

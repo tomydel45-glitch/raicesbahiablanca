@@ -510,7 +510,7 @@
     ]
   },
   {
-    "Producto": "Cantonera Metalica X2,6 0,38",
+    "Producto": "Cantonera Metalica",
     "Marca": "BARBIERI",
     "Dimensiones": " 2.6 0,38 / 2.6 0.52",
     "Categoría": "PERFILES",
@@ -660,7 +660,7 @@
     "cloudinary_url": "https://res.cloudinary.com/depi6dfdz/image/upload/v1770331564/FOTOS%20PRODUCTOS/RC/Cinta%20De%20Enmascarar.jpg"
   },
   {
-    "Producto": "Cinta Doble Faz 3M 25,4Mm X 1,27M",
+    "Producto": "Cinta Doble Faz 3M",
     "Marca": "3M",
     "Dimensiones": "25.4MM x 1.27M",
     "Categoría": "HERRAMIENTAS",
@@ -698,6 +698,34 @@
     "cloudinary_url": "https://res.cloudinary.com/depi6dfdz/image/upload/v1770651678/FOTOS%20PRODUCTOS/SUPERBOARD/Cinta%20Junta%20Inv.jpg"
   },
   {
+    "Producto": "Cinta Juntas Exterior Azul",
+    "Marca": "KNAUF",
+    "Dimensiones": "10CM x 50M",
+    "Categoría": "HERRAMIENTAS",
+    "Subcategoría 1": "",
+    "Subcategoría 2": "",
+    "Subcategoría 3": "",
+    "Descripción": "",
+    "STOCK": "",
+    "cloudinary_url": [
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1770909246/Cinta_Juntas_Exterior_Azul_fcgsud.jpg"
+    ]
+  },
+  {
+    "Producto": "Cinta Juntas Exterior Blanca",
+    "Marca": "KNAUF",
+    "Dimensiones": "10 CM x 100ML",
+    "Categoría": "HERRAMIENTAS",
+    "Subcategoría 1": "",
+    "Subcategoría 2": "",
+    "Subcategoría 3": "",
+    "Descripción": "",
+    "STOCK": "",
+    "cloudinary_url": [
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1770909246/Cinta_Juntas_Exterior_Blanca_e7wmf2.webp"
+    ]
+  },
+  {
     "Producto": "Cinta Metrica 8M",
     "Marca": "STANLEY",
     "Dimensiones": "8M",
@@ -722,7 +750,7 @@
     "cloudinary_url": "https://res.cloudinary.com/depi6dfdz/image/upload/v1770242303/FOTOS%20PRODUCTOS/ESSAMET/Cinta%20Metrica%20X%205M.webp"
   },
   {
-    "Producto": "Cinta Papel Microperf",
+    "Producto": "Cinta Papel Microperforado",
     "Marca": "FIBROFLEX",
     "Dimensiones": "150M / 75M / 35M",
     "Categoría": "HERRAMIENTAS",
@@ -734,7 +762,7 @@
     "cloudinary_url": "https://res.cloudinary.com/depi6dfdz/image/upload/v1770318284/FOTOS%20PRODUCTOS/FIBROFLEX/Cinta%20Papel%20Microperf.webp"
   },
   {
-    "Producto": "Cinta Papel Microperf ",
+    "Producto": "Cinta Papel Microperforado ",
     "Marca": "KNAUF",
     "Dimensiones": "150M / 75M ",
     "Categoría": "HERRAMIENTAS",
@@ -748,7 +776,7 @@
     ]
   },
   {
-    "Producto": "Cinta Papel Microperf ",
+    "Producto": "Cinta Papel Microperforado ",
     "Marca": "POLYTEMP",
     "Dimensiones": "150M / 75M / 23M",
     "Categoría": "ADHESIVOS Y SELLADORES",
@@ -1128,7 +1156,7 @@
     "cloudinary_url": "https://res.cloudinary.com/depi6dfdz/image/upload/v1770679666/FOTOS%20PRODUCTOS/SIN%20MARCA/Hacha.webp"
   },
   {
-    "Producto": "Hoja Cutter 6011-911",
+    "Producto": "Hoja Cutter",
     "Marca": "STANLEY",
     "Dimensiones": "",
     "Categoría": "HERRAMIENTAS",
@@ -1190,7 +1218,7 @@
     "cloudinary_url": "https://res.cloudinary.com/depi6dfdz/image/upload/v1770679541/FOTOS%20PRODUCTOS/ISOVER/FIELTRO%20LIVIANO.webp"
   },
   {
-    "Producto": "Lana Fieltro Tensado Alu",
+    "Producto": "Lana Fieltro Tensado Aluminio",
     "Marca": "ISOVER",
     "Dimensiones": "1.2 x 14 / 50MM",
     "Categoría": "AISLACIONES",
@@ -1242,7 +1270,7 @@
     "cloudinary_url": "https://res.cloudinary.com/depi6dfdz/image/upload/v1770679551/FOTOS%20PRODUCTOS/ISOVER/ROLAC%20PLATA.webp"
   },
   {
-    "Producto": "Lana Rp Muro",
+    "Producto": "Lana Rolac Plata Muro",
     "Marca": "ISOVER",
     "Dimensiones": " 0,40X12 14,4M2 50MM /  0,40X6 7,2M2 100MM / 0,40X7 84M2 100MM",
     "Categoría": "AISLACIONES",
@@ -1456,6 +1484,20 @@
     "Descripción": "",
     "STOCK": "",
     "cloudinary_url": "https://res.cloudinary.com/depi6dfdz/image/upload/v1770678474/Malla_Plastica_Sosten_Membrana.web"
+  },
+  {
+    "Producto": "Malla Exterior AQUAPANEL",
+    "Marca": "KNAUF",
+    "Dimensiones": "100CM x 50ML",
+    "Categoría": "ACCESORIOS",
+    "Subcategoría 1": "INTERIOR/EXTERIOR",
+    "Subcategoría 2": "",
+    "Subcategoría 3": "",
+    "Descripción": "",
+    "STOCK": "",
+    "cloudinary_url": [
+      "https://res.cloudinary.com/depi6dfdz/image/upload/v1770909245/Malla_Exterior_AQUAPANEL_jidpsh.avif"
+    ]
   },
   {
     "Producto": "Malla Sosten Transparente",
@@ -2358,7 +2400,7 @@
     ]
   },
   {
-    "Producto": "Placa Andina Isocustic Velo Negro 0,61X1,21",
+    "Producto": "Placa Andina Isocustic Velo Negro",
     "Marca": "ISOVER",
     "Dimensiones": "0.61 x 1.21",
     "Categoría": "PLACAS",
@@ -2373,7 +2415,7 @@
     ]
   },
   {
-    "Producto": "Placa Andina Pvc Rustico 0,61X1,21",
+    "Producto": "Placa Andina Pvc Rustico",
     "Marca": "ISOVER",
     "Dimensiones": "0.61 x 1.21",
     "Categoría": "PLACAS",
@@ -2997,7 +3039,7 @@
     "cloudinary_url": "https://res.cloudinary.com/depi6dfdz/image/upload/v1770651673/FOTOS%20PRODUCTOS/STANLEY/Plato%20Yeso%20330M.jpg"
   },
   {
-    "Producto": "Porcellanato Flex",
+    "Producto": "Porcelanato Flex",
     "Marca": "WEBER",
     "Dimensiones": "25KG",
     "Categoría": "ADHESIVOS Y SELLADORES",
@@ -3045,7 +3087,7 @@
     "cloudinary_url": "https://res.cloudinary.com/depi6dfdz/image/upload/v1770331517/FOTOS%20PRODUCTOS/OBLAK/Puerta%20De%20Embutir%20Nativa%20Mdf.jpg"
   },
   {
-    "Producto": "Puerta Enchap Doble Cedro",
+    "Producto": "Puerta Enchapada Doble Cedro",
     "Marca": "OBLAK",
     "Dimensiones": "0,6 / 0,7 / 0,8",
     "Categoría": "TERMINACIONES",
@@ -3891,7 +3933,7 @@
     "cloudinary_url": "https://res.cloudinary.com/depi6dfdz/image/upload/v1770678766/RESTUARADOR_nv1bc4.png"
   },
   {
-    "Producto": "Rev Ext Lp Smart Panel H",
+    "Producto": "Revestimiento Exterior Smart Panel H",
     "Marca": "LP",
     "Dimensiones": "11,1 Mm 1,22 M X 4,88 M",
     "Categoría": "PLACAS",
@@ -4578,7 +4620,7 @@
     ]
   },
   {
-    "Producto": "Viga I Joist Lp Doble T",
+    "Producto": "Viga I Joist Doble T",
     "Marca": "LP",
     "Dimensiones": "24CM x 6MTS",
     "Categoría": "ACCESORIOS",

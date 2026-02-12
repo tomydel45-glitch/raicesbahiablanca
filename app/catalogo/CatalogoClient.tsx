@@ -66,7 +66,7 @@ const generateSlug = (name: string): string => {
 };
 
 // Categories that should NOT show subcategories
-const categoriesWithoutSubcategories = ['AISLACIONES', 'MASILLAS Y REVOQUES', 'PLACAS'];
+const categoriesWithoutSubcategories = ['AISLACIONES', 'HERRAMIENTAS', 'MASILLAS Y REVOQUES'];
 
 // Get unique categories from the data
 const getUniqueCategories = (products: Product[]) => {
