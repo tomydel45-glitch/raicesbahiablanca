@@ -154,7 +154,7 @@ export const seoCategorias: Record<string, CategorySEO> = {
     ],
   },
   placas: {
-    title: 'Placas de Yeso y Cementicias - Durlock Knauf, Superboard, Eternit | Raíces Bahía Blanca',
+    title: 'Placas de Yeso - Durlock Knauf, Superboard, Eternit | Raíces Bahía Blanca',
     description:
       'Placas para construcción en seco: Durlock Knauf estándar/verde/rosa (1.20x2.40-2.60-3.00m), placas cementicias Superboard 6-8-10mm, Eternit, placas ignífugas y antihumedad. Stock permanente en Bahía Blanca, envíos a Viedma y Las Grutas.',
     h1: 'Placas de Yeso y Cementicias',
