@@ -54,11 +54,11 @@ export async function generateMetadata({
     });
   }
 
-  // Construir title: "{nombre} | {marca} — Raíces"
+  // Construir title: "{nombre} | {marca}" (el layout agrega " | Raíces Bahía Blanca")
   const marca = product.Marca.trim();
   const title = marca
-    ? `${product.Producto} | ${marca} — ${SITE_NAME}`
-    : `${product.Producto} — ${SITE_NAME}`;
+    ? `${product.Producto} | ${marca}`
+    : product.Producto;
 
   // Construir description con prioridad:
   // 1. Descripción del producto (si existe)

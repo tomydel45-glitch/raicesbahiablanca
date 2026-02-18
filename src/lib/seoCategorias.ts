@@ -17,7 +17,7 @@ export interface CategorySEO {
 
 export const seoCategorias: Record<string, CategorySEO> = {
   accesorios: {
-    title: 'Accesorios para Construcción en Seco - Tornillos, Anclajes y Fijaciones | Raíces Bahía Blanca',
+    title: 'Accesorios para Construcción en Seco - Tornillos, Anclajes y Fijaciones',
     description:
       'Amplio stock de accesorios para steel frame y durlock: tornillos autoperforantes, anclajes Fischer, grampas, cinta papel Knauf, esquineros y alambres galvanizados. Envíos a Bahía Blanca, Viedma y Las Grutas.',
     h1: 'Accesorios para Construcción en Seco',
@@ -39,7 +39,7 @@ export const seoCategorias: Record<string, CategorySEO> = {
     ],
   },
   'adhesivos-y-selladores': {
-    title: 'Adhesivos y Selladores Profesionales - Weber, Eternit, Fischer | Raíces Bahía Blanca',
+    title: 'Adhesivos y Selladores Profesionales - Weber, Eternit, Fischer',
     description:
       'Adhesivos y selladores de alta performance: adhesivo cementicio Eternit Simplísima, ampollas químicas Fischer, Sikaflex, pegamentos multiuso ATZ-280. Stock permanente de marcas Weber, Eternit y Fischer en Bahía Blanca.',
     h1: 'Adhesivos y Selladores',
@@ -61,7 +61,7 @@ export const seoCategorias: Record<string, CategorySEO> = {
     ],
   },
   aislaciones: {
-    title: 'Aislaciones Térmicas y Acústicas - Lana de Vidrio Isover, EPS, Wichi Roofing | Raíces',
+    title: 'Aislaciones Térmicas y Acústicas - Lana de Vidrio Isover, EPS, Wichi Roofing',
     description:
       'Materiales de aislación térmica y acústica: lana de vidrio Isover, poliestireno expandido EPS densidades 10-20-30kg, membrana Wichi Roofing, barreras de vapor. Stock permanente para steel frame y durlock en Bahía Blanca.',
     h1: 'Aislaciones Térmicas y Acústicas',
@@ -84,7 +84,7 @@ export const seoCategorias: Record<string, CategorySEO> = {
     ],
   },
   herramientas: {
-    title: 'Herramientas Profesionales - DeWalt, Stanley, Skil, Fischer | Raíces Bahía Blanca',
+    title: 'Herramientas Profesionales - DeWalt, Stanley, Skil, Fischer',
     description:
       'Herramientas profesionales para construcción en seco: amoladoras DeWalt DWE4010, atornilladores Skil, cortadoras de placas, espátulas Stanley, niveles, llanas. Equipamiento completo para instaladores en Bahía Blanca.',
     h1: 'Herramientas Profesionales',
@@ -107,7 +107,7 @@ export const seoCategorias: Record<string, CategorySEO> = {
     ],
   },
   'masillas-y-revoques': {
-    title: 'Masillas y Revoques - Knauf, Weber, Tomecol | Raíces Bahía Blanca',
+    title: 'Masillas y Revoques - Knauf, Weber, Tomecol',
     description:
       'Masillas para juntas y revoques de primera calidad: Knauf Uniflott, Tomecol Weber, Goldband, yeso proyectable MP75/MP40, enduidos, bases y acabados. Soluciones profesionales para terminaciones perfectas en Bahía Blanca.',
     h1: 'Masillas y Revoques',
@@ -130,7 +130,7 @@ export const seoCategorias: Record<string, CategorySEO> = {
     ],
   },
   perfiles: {
-    title: 'Perfiles Metálicos para Steel Frame - Barbieri, Knauf, Eternit | Raíces Bahía Blanca',
+    title: 'Perfiles Metálicos para Steel Frame - Barbieri, Knauf, Eternit',
     description:
       'Perfiles galvanizados para steel frame y durlock: montantes 70-100-150mm Barbieri, soleras 35-70-100mm, omega, perfiles F47 Knauf, riel U Eternit, esquineros. Stock completo de estructuras metálicas en Bahía Blanca, Viedma y Las Grutas.',
     h1: 'Perfiles para Construcción en Seco',
@@ -154,7 +154,7 @@ export const seoCategorias: Record<string, CategorySEO> = {
     ],
   },
   placas: {
-    title: 'Placas de Yeso - Durlock Knauf, Superboard, Eternit | Raíces Bahía Blanca',
+    title: 'Placas de Yeso - Durlock Knauf, Superboard, Eternit',
     description:
       'Placas para construcción en seco: Durlock Knauf estándar/verde/rosa (1.20x2.40-2.60-3.00m), placas cementicias Superboard 6-8-10mm, Eternit, placas ignífugas y antihumedad. Stock permanente en Bahía Blanca, envíos a Viedma y Las Grutas.',
     h1: 'Placas de Yeso y Cementicias',
@@ -178,7 +178,7 @@ export const seoCategorias: Record<string, CategorySEO> = {
     ],
   },
   terminaciones: {
-    title: 'Terminaciones - Molduras, Zócalos, Cornisas Perfiles Revestidos | Raíces Bahía Blanca',
+    title: 'Terminaciones - Molduras, Zócalos, Cornisas Perfiles Revestidos',
     description:
       'Terminaciones decorativas para construcción en seco: molduras, zócalos PZ-56L/78/87/103/126, cornisas, guardacantos, buñas, perfiles decorativos Perfiles Revestidos. Acabados perfectos para tu obra en Bahía Blanca.',
     h1: 'Terminaciones y Revestimientos',
@@ -205,7 +205,7 @@ export const seoCategorias: Record<string, CategorySEO> = {
 
 /** Metadata por defecto para el catálogo sin categoría específica */
 export const catalogoDefaultSEO: CategorySEO = {
-  title: 'Catálogo de Materiales de Construcción en Seco | Raíces Bahía Blanca',
+  title: 'Catálogo de Materiales de Construcción en Seco',
   description:
     'Catálogo completo de materiales para steel frame y durlock: placas Knauf, perfiles Barbieri, aislaciones Isover, herramientas DeWalt, masillas Weber. +4500 productos con stock permanente y asesoramiento técnico en Bahía Blanca, Viedma y Las Grutas.',
   h1: 'Catálogo de Materiales',

@@ -20,7 +20,7 @@ interface Obra {
 const obras: Obra[] = obrasData;
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Obras Realizadas — Proyectos en Construcción en Seco | Raíces Bahía Blanca',
+  title: 'Obras Realizadas — Proyectos en Construcción en Seco',
   description:
     'Conocé las obras y proyectos realizados con materiales de construcción en seco por Raíces Bahía Blanca. Casas, locales comerciales y más en Bahía Blanca y la región.',
   path: '/obras',
