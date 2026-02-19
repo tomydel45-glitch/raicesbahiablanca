@@ -151,9 +151,20 @@ export function Footer() {
 
       {/* Copyright */}
       <div className="border-t border-white/10">
-        <div className="container-wide py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="container-wide py-6 flex flex-col items-center text-center gap-2">
           <p className="text-white/40 text-sm">
             © {new Date().getFullYear()} Raíces Bahía Blanca. Todos los derechos reservados.
+          </p>
+          <p className="text-white/40 text-sm">
+            Desarrollado por{' '}
+            <a
+              href="https://www.linkedin.com/in/tom%C3%A1s-kreczmer-b5682a37a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-primary transition-colors"
+            >
+              Tomas Kreczmer
+            </a>
           </p>
         </div>
       </div>
