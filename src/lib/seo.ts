@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 // ─── Constantes globales SEO ───────────────────────────────────────────────────
 
 export const SITE_NAME = 'Raíces Bahía Blanca';
-export const SITE_URL = 'https://raices-bahia-blanca.vercel.app';
+export const SITE_URL = 'https://raicesbahiablanca.com.ar';
 export const SITE_DESCRIPTION =
   'Todo para construcción en seco y steel frame en un solo lugar: materiales de excelencia, asesoramiento técnico y experiencia que garantizan soluciones confiables y eficientes. Distribuidores autorizados en Bahía Blanca, Viedma y Las Grutas desde 1994.';
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/logo-raices.png`;
