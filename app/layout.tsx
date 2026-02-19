@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: SITE_NAME }],
   openGraph: {
-    title: `${SITE_NAME} — Materiales de Construcción en Seco`,
+    title: `${SITE_NAME} — Tecnología en Construcción`,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     siteName: SITE_NAME,
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE_NAME} — Materiales de Construcción en Seco`,
+    title: `${SITE_NAME} — Tecnología en Construcción`,
     description: SITE_DESCRIPTION,
     images: [DEFAULT_OG_IMAGE],
   },
