@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Materiales de Construcción en Seco`,
+    default: `${SITE_NAME} — Tecnología en Construcción`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
