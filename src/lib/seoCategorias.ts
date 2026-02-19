@@ -207,10 +207,10 @@ export const seoCategorias: Record<string, CategorySEO> = {
 export const catalogoDefaultSEO: CategorySEO = {
   title: 'Catálogo de Materiales de Construcción en Seco',
   description:
-    'Catálogo completo de materiales para steel frame y durlock: placas Knauf, perfiles Barbieri, aislaciones Isover, herramientas DeWalt, masillas Weber. +4500 productos con stock permanente y asesoramiento técnico en Bahía Blanca, Viedma y Las Grutas.',
+    'Catálogo completo de materiales para steel frame y durlock: placas Knauf, perfiles Barbieri, aislaciones Isover, herramientas DeWalt, masillas Weber. +450 productos con stock permanente y asesoramiento técnico en Bahía Blanca, Viedma y Las Grutas.',
   h1: 'Catálogo de Materiales',
   intro:
-    'Explorá nuestra selección completa de más de 4500 productos para construcción en seco. Trabajamos con las marcas líderes del mercado: Knauf, Barbieri, Fischer, Eternit, Weber, DeWalt, Stanley, Isover, Perfiles Revestidos y más. Stock permanente de placas de yeso y cementicias, perfiles galvanizados para steel frame, aislaciones térmicas y acústicas, herramientas profesionales, masillas, revoques y terminaciones. Filtrá por categoría, marca o tipo de uso para encontrar exactamente lo que necesitás. Atendemos obras en Bahía Blanca, Viedma, Las Grutas y zona con asesoramiento técnico especializado.',
+    'Explorá nuestra selección completa de más de 450 productos para construcción en seco. Trabajamos con las marcas líderes del mercado: Knauf, Barbieri, Fischer, Eternit, Weber, DeWalt, Stanley, Isover, Perfiles Revestidos y más. Stock permanente de placas de yeso y cementicias, perfiles galvanizados para steel frame, aislaciones térmicas y acústicas, herramientas profesionales, masillas, revoques y terminaciones. Filtrá por categoría, marca o tipo de uso para encontrar exactamente lo que necesitás. Atendemos obras en Bahía Blanca, Viedma, Las Grutas y zona con asesoramiento técnico especializado.',
   canonical: '/catalogo',
   keywords: [
     'catálogo construcción en seco',
@@ -224,6 +224,6 @@ export const catalogoDefaultSEO: CategorySEO = {
     'masillas Weber Tomecol',
     'Fischer anclajes',
     'Eternit placas cementicias',
-    '+4500 productos stock permanente'
+    '+450 productos stock permanente'
   ],
 };
