@@ -65,6 +65,41 @@ export function AboutSection() {
             </div>
           </div>
         </div>
+
+        {/* Equipo */}
+        <div className="mt-24 animate-fade-up">
+          <div className="text-center mb-12">
+            <h3 className="heading-section">
+              Nuestro <span className="text-primary">equipo</span>
+            </h3>
+            <div className="w-20 h-1 bg-primary mx-auto mt-4" />
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              'Sergio',
+              'Fernanda',
+              'Pilar',
+              'Carolina',
+              'Romina',
+              'Joaquin',
+              'Pamela',
+              'Ismael',
+            ].map((name) => (
+              <div
+                key={name}
+                className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-card-hover group"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`https://res.cloudinary.com/depi6dfdz/image/upload/w_400,h_530,c_fill,g_face,q_auto,f_auto/v1772229943/${name}.png`}
+                  alt={`Foto de ${name}, equipo de Raíces Bahía Blanca`}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
