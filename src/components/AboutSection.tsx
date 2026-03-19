@@ -74,28 +74,40 @@ export function AboutSection() {
             </h3>
             <div className="w-20 h-1 bg-primary mx-auto mt-4" />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[
-              'Sergio',
-              'Fernanda',
-              'Pilar',
-              'Carolina',
-              'Romina',
-              'Joaquin',
-              'Pamela',
-              'Ismael',
-            ].map((name) => (
+              { name: 'Fernanda', role: 'Dirección Administrativa', description: 'Gestiona la administración general de la empresa, la relación con proveedores y el área contable.' },
+              { name: 'Sergio', role: 'Director de Obras', description: 'Encargado de la planificación y ejecución de cada proyecto' },
+              { name: 'Pamela', role: 'Gerente de Operaciones', description: 'Supervisa la atención al cliente y coordina la gestión entre clientes, proveedores y el equipo de trabajo.' },
+              { name: 'Lucia', role: 'Administración y Desarrollo de Proyectos' },
+              { name: 'Pilar', role: 'Comunicación y Marketing' },
+              { name: 'Romina', role: 'Atención al cliente.' },
+              { name: 'Carolina', role: 'Atención al cliente y Administración de Obras.' },
+              { name: 'Ismael', role: 'Depósito y repartos', description: 'Recepción de mercadería, organización del depósito y entrega de materiales a clientes.' },
+              { name: 'Joaquin', role: 'Depósito y repartos', description: 'Recepción de mercadería, organización del depósito y entrega de materiales a clientes.' },
+              { name: 'Diego', role: 'Depósito', description: 'Recepción de mercadería, organización del depósito.' },
+            ].map((member) => (
               <div
-                key={name}
-                className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-card-hover group"
+                key={member.name}
+                className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-card-hover group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70"
+                tabIndex={0}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={`https://res.cloudinary.com/depi6dfdz/image/upload/w_400,h_530,c_fill,g_face,q_auto,f_auto/v1772229943/${name}.png`}
-                  alt={`Foto de ${name}, equipo de Raíces Bahía Blanca`}
+                  src={`https://res.cloudinary.com/depi6dfdz/image/upload/w_400,h_530,c_fill,g_face,q_auto,f_auto/v1772229943/${member.name}.png`}
+                  alt={`Foto de ${member.name}, ${member.role} en Raíces Bahía Blanca`}
                   loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent px-3 pb-3 pt-10">
+                  <p className="text-white font-bold text-sm leading-tight">{member.name}</p>
+                  <p className="text-primary text-xs font-medium leading-tight">{member.role}</p>
+                  {member.description && (
+                    <div className="max-h-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:max-h-40 group-hover:opacity-100 group-focus-within:max-h-40 group-focus-within:opacity-100">
+                      <p className="text-white/80 text-xs mt-1 leading-snug">{member.description}</p>
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>

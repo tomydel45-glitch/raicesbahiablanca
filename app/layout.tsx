@@ -8,6 +8,10 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  icons: {
+    icon: '/favicona.ico',
+    shortcut: '/favicona.ico',
+  },
   title: {
     default: `${SITE_NAME} — Tecnología en Construcción`,
     template: `%s | ${SITE_NAME}`,
