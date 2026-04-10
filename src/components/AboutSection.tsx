@@ -78,7 +78,7 @@ export function AboutSection() {
             {[
               { name: 'Fernanda', role: 'Dirección Administrativa', description: 'Gestiona la administración general de la empresa, la relación con proveedores y el área contable.' },
               { name: 'Sergio', role: 'Director de Obras', description: 'Encargado de la planificación y ejecución de cada proyecto' },
-              { name: 'Pamela', role: 'Gerente de Operaciones', description: 'Supervisa la atención al cliente y coordina la gestión entre clientes, proveedores y el equipo de trabajo.' },
+              { name: 'Pamela', role: 'Administradora de Operaciones', description: 'Supervisa la atención al cliente y coordina la gestión entre clientes, proveedores y el equipo de trabajo.' },
               { name: 'Lucia', role: 'Administración y Desarrollo de Proyectos' },
               { name: 'Pilar', role: 'Comunicación y Marketing' },
               { name: 'Romina', role: 'Atención al cliente.' },

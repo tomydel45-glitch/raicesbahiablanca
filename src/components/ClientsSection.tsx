@@ -8,7 +8,7 @@ const clients = [
   { name: 'Shell', logo: '/clients/shell.png' },
   {name:'McDonald’s', logo: '/clients/mcdonalds.png' },
 
-  { name: 'Coca-Cola', logo: '/clients/cocacola.png' },
+   { name: 'Howard Johnson', logo: '/clients/HowardJohnson.png' },
   { name: 'Stellantis', logo: '/clients/stellantis.png' },
   { name: 'Indian', logo: '/clients/indian.png' },
   { name: 'Dietrich', logo: '/clients/dietrich.png' },
@@ -16,6 +16,7 @@ const clients = [
   { name: 'Spot', logo: '/clients/spot.png' },
   { name: 'ACA', logo: '/clients/aca.png' },
   { name: 'Mity', logo: '/clients/mity1.png' },
+ 
 ];
 
 export function ClientsSection() {
