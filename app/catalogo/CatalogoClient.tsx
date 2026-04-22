@@ -318,11 +318,8 @@ function CatalogoContent() {
     const productUso = product['Subcategoría 1']?.trim() || '';
     const usoMatch = selectedUso === 'Todos' || productUso === selectedUso;
     
-    const searchMatch = searchQuery === '' || 
-      product.Producto.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.Categoría.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.Marca.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.Descripción.toLowerCase().includes(searchQuery.toLowerCase());
+    const searchMatch = searchQuery === '' ||
+      product.Producto.toLowerCase().includes(searchQuery.toLowerCase());
     return categoryMatch && subcategoryMatch && brandMatch && usoMatch && searchMatch;
   }), [products, selectedCategory, selectedSubcategory, selectedBrand, selectedUso, searchQuery]);
 
